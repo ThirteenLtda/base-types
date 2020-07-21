@@ -12,6 +12,7 @@ endif()
 
 rock_library(
     base-types 
+        Acceleration.cpp
         Angle.cpp
         JointLimitRange.cpp
         JointLimits.cpp
@@ -20,29 +21,36 @@ rock_library(
         JointTransform.cpp
         Pose.cpp
         Pressure.cpp
+        RigidBodyStateSE3.cpp
         Temperature.cpp
         Time.cpp
         TimeMark.cpp
         Timeout.cpp
         TransformWithCovariance.cpp
+        Twist.cpp
         TwistWithCovariance.cpp
         Waypoint.cpp
+        Wrench.cpp
         commands/Motion2D.cpp
         samples/BodyState.cpp
+        samples/BoundingBox.cpp
         samples/DepthMap.cpp
         samples/DistanceImage.cpp
         samples/Frame.cpp
         samples/Joints.cpp
         samples/LaserScan.cpp
+        samples/OrientedBoundingBox.cpp
+        samples/PoseWithCovariance.cpp
         samples/Pressure.cpp
         samples/RigidBodyAcceleration.cpp
         samples/RigidBodyState.cpp
         samples/Sonar.cpp
         samples/SonarBeam.cpp
         samples/SonarScan.cpp
-        samples/PoseWithCovariance.cpp
+        samples/Temperature.cpp
         ${OPTIONAL_CPP}
     HEADERS
+        Acceleration.hpp
         Angle.hpp
         CircularBuffer.hpp
         Deprecated.hpp
@@ -59,6 +67,7 @@ rock_library(
         Point.hpp
         Pose.hpp
         Pressure.hpp
+        RigidBodyStateSE3.hpp
         Singleton.hpp 
         Spline.hpp
         Temperature.hpp
@@ -66,15 +75,18 @@ rock_library(
         TimeMark.hpp
         Timeout.hpp
         TransformWithCovariance.hpp
+        Twist.hpp
         TwistWithCovariance.hpp
         Waypoint.hpp
         Wrench.hpp
         commands/Joints.hpp
         commands/Motion2D.hpp
         commands/Speed6D.hpp
-	commands/LinearAngular6DCommand.hpp
+        commands/LinearAngular6DCommand.hpp
         logging/logging_iostream_style.h 
         logging/logging_printf_style.h
+        samples/Acceleration.hpp
+        samples/BoundingBox.hpp
         samples/BodyState.hpp
         samples/CommandSamples.hpp
         samples/DepthMap.hpp
@@ -83,17 +95,22 @@ rock_library(
         samples/IMUSensors.hpp
         samples/Joints.hpp
         samples/LaserScan.hpp
+        samples/OrientedBoundingBox.hpp
         samples/Pointcloud.hpp
         samples/Pressure.hpp
         samples/RigidBodyAcceleration.hpp
         samples/RigidBodyState.hpp
+        samples/RigidBodyStateSE3.hpp
+        samples/RigidBodyStateSE3Vector.hpp
         samples/Sonar.hpp
         samples/SonarBeam.hpp
         samples/SonarScan.hpp
         samples/PoseWithCovariance.hpp
+        samples/Twist.hpp
+        samples/Temperature.hpp
+        templates/TimeStamped.hpp
         samples/Wrench.hpp
         samples/Wrenches.hpp
-        templates/TimeStamped.hpp
         ${OPTIONAL_HPP}
     DEPS_PKGCONFIG 
         base-logging
